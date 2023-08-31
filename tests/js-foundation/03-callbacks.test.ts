@@ -16,4 +16,20 @@ describe('js-foundation/03-callbacks.ts', () => {
 
   })
 
+  test('getUserById should return a John Doe', () => { 
+
+    const id = 1;
+
+    getUserById( id, ( err, user ) => {
+
+      expect( err ).toBeUndefined()
+      expect( user ).toEqual({ 
+        id: 1,
+        name: 'John Doe'
+       });
+
+    })
+
+  })
+
 }) 
